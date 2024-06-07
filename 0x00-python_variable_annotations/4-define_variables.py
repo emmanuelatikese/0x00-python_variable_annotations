@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+'''bunch of var'''
 
 
 a: int = 1
