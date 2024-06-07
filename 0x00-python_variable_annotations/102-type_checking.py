@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-''' last comment here'''
+''' this is function all about tuples'''
 from typing import Tuple
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> list:
-    '''at last '''
+    '''this is a zooom array '''
     zoomed_in: Tuple = [
         item for item in lst
         for i in range(int(factor))
