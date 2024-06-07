@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-from typing import Tuple
+from typing import Tuple, List, Any
 
-def zoom_array(lst: Tuple, factor: int= 2) -> list:
+
+def zoom_array(lst: List[int], factor: int = 2) -> List[Tuple[Any]]:
     zoomed_in: Tuple = [
         item for item in lst
         for i in range(int(factor))
