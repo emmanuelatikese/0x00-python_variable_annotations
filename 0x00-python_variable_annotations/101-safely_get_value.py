@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from typing import Mapping, Union, Any, TypeVar
 T = TypeVar('T')
 
