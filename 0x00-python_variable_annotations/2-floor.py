@@ -4,5 +4,5 @@ import math
 
 
 def floor(n: float) -> int:
-    '''func begins'''
+    '''function is about floor'''
     return math.floor(n)
