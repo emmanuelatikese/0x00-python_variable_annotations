@@ -22,7 +22,7 @@ class TestGithubOrgClient(unittest.TestCase):
         test_obj.org()
         mock.assert_called_once_with(test_url)
 
-    def test_public_repos_url(self):
+    def test_public_repos_url(self) -> None:
         '''testing public_repos in client.py'''
         with patch("client.GithubOrgClient.org",
                    new_callable=PropertyMock) as mk:
