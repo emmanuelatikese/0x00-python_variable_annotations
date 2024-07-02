@@ -32,6 +32,18 @@ class TestGithubOrgClient(unittest.TestCase):
             test_obj = GithubOrgClient("abc")._public_repos_url
             self.assertEqual(test_obj, mk.return_value["repos_url"])
 
+    @patch("client.get_json")
+    def test_public_repos(self, mock):
+        '''testing on public repositories'''
+        payload_mk = [{"name": "abc"}, {"name": "google"}]
+        mock.return_value = payload_mk
+        with patch("client.GithubOrgClient._public_repos_url",
+                   new_callable=PropertyMock) as G_mock:
+            G_mock.return_value = "https://api.github.com/orgs/abc/repos"
+            test_obj = GithubOrgClient("abc")
+            repo = test_obj.public_repos()
+            self.assertEqual(repo, ["abc", "google"])
+
 
 if __name__ == '__main__':
     unittest.main()
